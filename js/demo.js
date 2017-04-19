@@ -33,7 +33,7 @@ var vm = new Vue({
 	},
 	methods:{
 		addTodo: function(){
-			if( this.todotext.length > 0 && this.todotext !== null ){
+			if( this.todotext.length > 0 && this.todotext !== null && this.todotext !== ' '  ){
 				todolist.push( {
 					title: this.todotext,
 					isChecked: false
