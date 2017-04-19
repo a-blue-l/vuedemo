@@ -33,11 +33,13 @@ var vm = new Vue({
 	},
 	methods:{
 		addTodo: function(){
-			todolist.push( {
-				title: this.todotext,
-				isChecked: false
-			} );
-			this.todotext = '';
+			if( this.todotext.length > 0 ){
+				todolist.push( {
+					title: this.todotext,
+					isChecked: false
+				} );
+				this.todotext = '';   
+			}
 		},
 		deletetodo: function( item ){
 			todolist.splice( todolist.indexOf(item), 1 );
